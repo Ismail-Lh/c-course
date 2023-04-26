@@ -1,27 +1,17 @@
 #include <stdio.h>
 
 int main() {
-  // *:ARITHMETIC OPERATORS -----> + - * / % ++ --
-
-  // ?: + (addition)
-  // ?: - (subtraction)
-  // ?: * (multiplication)
-  // ?: / (division)
-  // ?: % (modulus)
-  // ?: ++ (increment by 1)
-  // ?: -- (decrement by 1)
+  // *:AUGMENTED ASSIGNMENT OPERATORS -----> used to replace a statement where an operator takes a variable as one of its arguments and then assigns the result back to the same variable EX: x = x + 1 ----> x += 1 
 
   int x = 5;
-  int y = 2;
 
-  // int z = x + y; output = 7
-  // int z = x - y; output = 3
-  // int z = x * y; output = 10
-  // int z = x / y; output = 2
-  // float z = x / (float)y; output = 2.50000
-  // int z = x % y; output = 1
+  x = x + 2;
+  x += 2;
 
-  printf("%d", z);
+  x = x - 2;
+  x -= 2;
+
+  printf("%d", x);
 
   return 0;
 }

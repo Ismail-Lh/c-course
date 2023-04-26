@@ -1,17 +1,21 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-  // *:AUGMENTED ASSIGNMENT OPERATORS -----> used to replace a statement where an operator takes a variable as one of its arguments and then assigns the result back to the same variable EX: x = x + 1 ----> x += 1 
+  // *:USER INPUT
 
-  int x = 5;
+  char name[25];
+  int age;
 
-  x = x + 2;
-  x += 2;
+  printf("What's your name? \n");
+  // scanf("%s", &name); // !: input = ismail lahbiyeb ----> output = ismail (get ride of the white space)
+  fgets(name, 25, stdin); // !: input = ismail lahbiyeb---- > output = ismail lahbiyeb
+  name[strlen(name) - 1] = '\0'; // !: remove the new line return
 
-  x = x - 2;
-  x -= 2;
+  printf("How old are you? \n");
+  scanf("%d", &age);
 
-  printf("%d", x);
+  printf("Your name is %s and you have %d years old", name, age);
 
   return 0;
 }

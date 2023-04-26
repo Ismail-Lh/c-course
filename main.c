@@ -1,21 +1,24 @@
 #include <stdio.h>
 
 int main() {
-  // *:VARIABLES -----> Variable is basically nothing but the name of a memory location that we use for storing data. We can change the value of a variable in C or any other language, and we can also reuse it multiple times. We use symbols in variables for representing the memory location- so that it becomes easily identifiable by any user.
+  // *:FORMAT SPECIFIER -----> defined and formats a type of data to be displayed
 
-  int x; // !: declaration
-  x = 1; // !: initialization
-  int y = 2; // !: declaration & initialization
+  // ?: %c = character
+  // ?: %s = string (array of character)
+  // ?: %f = float
+  // ?: %lf = double
+  // ?: %d = integer
 
-  int age = 21; // !: integer
-  float gpa = 2.1; // !: float number
-  char grade = 'C'; // !: single character
-  char name[] = "ism"; // !: array of characters (string)
+  // ?: %.1 = decimal precision
+  // ?: %1 = minimum field width
+  // ?: %- = left align
 
-  printf("Hello %s.\n", name);
-  printf("You are %d years old.\n", age);
-  printf("Your average grade is %c.\n", grade);
-  printf("Your gpa is %f.\n", gpa);
+  float item1 = 5.75;
+  float item2 = 10.00;
+  float item3 = 100.99;
+
+  printf("Item 1: $%f \n", item1); // !: float format specifier
+  printf("Item 1: $%.2f \n", item1); // !: float format specifier with 2 decimal precision
 
   return 0;
 }

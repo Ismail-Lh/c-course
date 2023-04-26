@@ -1,32 +1,21 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
-  // *:MATH FUNCTIONS
+  // *:CIRCLE CIRCUMFERENCE PROGRAM
 
-  double A = sqrt(9);
-  double B = pow(2, 4);
+  const double PI = 3.14159;
+  double radius;
+  double circumference;
+  double area;
 
-  int C = round(3.14);
-  int D = ceil(3.14);
-  int E = floor(3.99);
+  printf("Enter the radius of a circle: ");
+  scanf("%lf", &radius);
 
-  double F = fabs(-100);
-  double G = log(3);
-  double H = sin(45);
-  double I = cos(45);
-  double J = tan(45);
+  circumference = 2 * PI * radius;
+  area = PI * radius * radius;
 
-  printf("%lf \n", A);
-  printf("%lf \n", B);
-  printf("%d \n", C);
-  printf("%d \n", D);
-  printf("%d \n", E);
-  printf("%f \n", F);
-  printf("%lf \n", G);
-  printf("%lf \n", H);
-  printf("%lf \n", I);
-  printf("%lf \n", J);
+  printf("circumference: %lf \n", circumference);
+  printf("area: %lf", area);
 
   return 0;
 }

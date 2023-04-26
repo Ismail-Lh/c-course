@@ -1,21 +1,32 @@
 #include <stdio.h>
-#include <string.h>
+#include <math.h>
 
 int main() {
-  // *:USER INPUT
+  // *:MATH FUNCTIONS
 
-  char name[25];
-  int age;
+  double A = sqrt(9);
+  double B = pow(2, 4);
 
-  printf("What's your name? \n");
-  // scanf("%s", &name); // !: input = ismail lahbiyeb ----> output = ismail (get ride of the white space)
-  fgets(name, 25, stdin); // !: input = ismail lahbiyeb---- > output = ismail lahbiyeb
-  name[strlen(name) - 1] = '\0'; // !: remove the new line return
+  int C = round(3.14);
+  int D = ceil(3.14);
+  int E = floor(3.99);
 
-  printf("How old are you? \n");
-  scanf("%d", &age);
+  double F = fabs(-100);
+  double G = log(3);
+  double H = sin(45);
+  double I = cos(45);
+  double J = tan(45);
 
-  printf("Your name is %s and you have %d years old", name, age);
+  printf("%lf \n", A);
+  printf("%lf \n", B);
+  printf("%d \n", C);
+  printf("%d \n", D);
+  printf("%d \n", E);
+  printf("%f \n", F);
+  printf("%lf \n", G);
+  printf("%lf \n", H);
+  printf("%lf \n", I);
+  printf("%lf \n", J);
 
   return 0;
 }

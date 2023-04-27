@@ -4,15 +4,13 @@
 int main() {
   // *:LOGICAL OPERATORS -----> && || !
 
-  float temp;
-  printf("Enter the temp: ");
-  scanf("%f", &temp);
+  bool sunny = false;
 
-  if (temp <= 0 || temp >= 30) {
-    printf("The weather is bad!");
+  if (!sunny) {
+    printf("It's cloudy outside!");
   }
   else {
-    printf("The weather is good!");
+    printf("It's sunny outside!");
   }
 
   return 0;

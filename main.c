@@ -2,20 +2,24 @@
 #include <math.h>
 
 int main() {
-  // *:HYPOTENUSE CALCULATOR PROGRAM
+  // *:IF STATEMENTS
 
-  double A;
-  double B;
-  double C;
+  int age;
 
-  printf("Enter side A: ");
-  scanf("%lf", &A);
+  printf("Enter your age: ");
+  scanf("%d", &age);
 
-  printf("Enter side B: ");
-  scanf("%lf", &B);
+  if (age >= 18) {
+    printf("You are now signed up!");
+  }
+  else if (age <= 0) {
+    printf("You enter an invalid age!");
+  }
+  else {
+    printf("You are not allowed!");
+  }
 
-  C = sqrt(A * A + B * B);
 
-  printf("Side C: %lf", C);
+
   return 0;
 }

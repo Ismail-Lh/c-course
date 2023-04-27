@@ -1,17 +1,20 @@
 #include <stdio.h>
-#include <stdbool.h>
+
+void hello() {
+  printf("Hello world \n");
+  printf("Hello world \n");
+  printf("Hello world \n");
+  printf("Hello world \n");
+  printf("Hello world \n");
+  printf("Hello world \n");
+}
 
 int main() {
-  // *:LOGICAL OPERATORS -----> && || !
+  // *:FUNCTIONS
 
-  bool sunny = false;
-
-  if (!sunny) {
-    printf("It's cloudy outside!");
-  }
-  else {
-    printf("It's sunny outside!");
-  }
+  hello();
+  hello();
+  hello();
 
   return 0;
 }

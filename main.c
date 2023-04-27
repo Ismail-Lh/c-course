@@ -1,19 +1,17 @@
 #include <stdio.h>
 
-void hello(char name[], int age) {
-  printf("Happy birthday dear %s! \n", name);
-  printf("Your are %d years old! \n", age);
+double square(double x) {
+
+  return x * x;
 
 }
 
 int main() {
   // *:FUNCTIONS
 
-  char name[32] = "Ismail";
-  int age = 24;
+  double x = square(3);
 
-  hello(name, age);
-
+  printf("Result: %lf!", x);
 
   return 0;
 }

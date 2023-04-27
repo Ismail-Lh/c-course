@@ -8,11 +8,11 @@ int main() {
   printf("Enter the temp: ");
   scanf("%f", &temp);
 
-  if (temp >= 0 && temp <= 30) {
-    printf("The weather is good!");
+  if (temp <= 0 || temp >= 30) {
+    printf("The weather is bad!");
   }
   else {
-    printf("The weather is bad!");
+    printf("The weather is good!");
   }
 
   return 0;

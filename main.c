@@ -1,21 +1,21 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
-  // *:CIRCLE CIRCUMFERENCE PROGRAM
+  // *:HYPOTENUSE CALCULATOR PROGRAM
 
-  const double PI = 3.14159;
-  double radius;
-  double circumference;
-  double area;
+  double A;
+  double B;
+  double C;
 
-  printf("Enter the radius of a circle: ");
-  scanf("%lf", &radius);
+  printf("Enter side A: ");
+  scanf("%lf", &A);
 
-  circumference = 2 * PI * radius;
-  area = PI * radius * radius;
+  printf("Enter side B: ");
+  scanf("%lf", &B);
 
-  printf("circumference: %lf \n", circumference);
-  printf("area: %lf", area);
+  C = sqrt(A * A + B * B);
 
+  printf("Side C: %lf", C);
   return 0;
 }

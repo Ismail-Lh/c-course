@@ -1,20 +1,19 @@
 #include <stdio.h>
 
-void hello() {
-  printf("Hello world \n");
-  printf("Hello world \n");
-  printf("Hello world \n");
-  printf("Hello world \n");
-  printf("Hello world \n");
-  printf("Hello world \n");
+void hello(char name[], int age) {
+  printf("Happy birthday dear %s! \n", name);
+  printf("Your are %d years old! \n", age);
+
 }
 
 int main() {
   // *:FUNCTIONS
 
-  hello();
-  hello();
-  hello();
+  char name[32] = "Ismail";
+  int age = 24;
+
+  hello(name, age);
+
 
   return 0;
 }

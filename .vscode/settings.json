@@ -4,5 +4,6 @@
     "math.h": "c",
     "ctype.h": "c",
     "stdbool.h": "c"
-  }
+  },
+  "cSpell.words": ["strcmpi", "strlwr", "strnset", "strset", "strupr"]
 }

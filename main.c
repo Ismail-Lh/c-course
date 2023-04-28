@@ -1,28 +1,30 @@
 #include <stdio.h>
-
-
-
-void hello(char[32], int); // *: function prototype
+#include <string.h>
 
 int main() {
-  // *FUNCTION PROTOTYPE
+  // * STRING FUNCTIONS
 
-  // !: Function declaration, w/o a body, befor main(). Ensures that calls to a function are made with the correct arguments
+  char string1[32] = "Ismail";
+  char string2[32] = "Lahbiyeb";
 
-  // !: IMPORTANT NOTES
-  // ?: Many C compilers do not check for parameter matching
-  // ?: Missing arguments will result in unexpected behavior
-  // ?: A function prototype causes the compiler to flag an error if arguments are missing
+  // strlwr(string1); // ?: converts a string to lowercase
+  // strupr(string1); // ?: converts a string to uppercase
+  // strcat(string1, string2); // ?: appends string2 to the end of string1
+  // strncat(string1, string2, 4); // ?: appends n characters from string2 to the end of string1
+  // strcpy(string1, string2); // ?: copy string2 to string1
+  //strncpy(string1, string2, 4); // ?: copy n characters from string2 to string1
 
-  char name[32] = "ismail";
-  int age = 24;
+  // strset(string1, '?'); // ?: sets all characters of a string to a given character
+  // strnset(string1, '?', 1); // ?: sets first n character of a string to a given character
+  // strrev(string1); // ?: reverse a string
 
-  hello(name, age);
+  int result = strlen(string1); // ?: return the string length
+  // int result = strcmp(string1, string2); // ?: string compare all characters(check if the strings are the same)
+  // int result = strncmp(string1, string2, 1); // ?: string compare n characters
+  // int result = strcmpi(string1, string2); // ?: string compare all characters (check if the strings are the same) (ignore case sensitive)
+  // int result = strnicmp(string1, string2, 1); // ?: string compare n characters (ignore case sensitive)
+
+  printf("%d", result);
 
   return 0;
-}
-
-void hello(char name[32], int age) {
-  printf("Hello %s. \n", name);
-  printf("You are %d years old. \n", age);
 }

@@ -1,17 +1,15 @@
 #include <stdio.h>
 
-double square(double x) {
 
-  return x * x;
-
-}
 
 int main() {
-  // *:FUNCTIONS
+  // *:TERNARY OPERATOR -----> shortcut to if/else when assigning/returning a value (condition) ? value if true : value if false
 
-  double x = square(3);
+  int age;
+  printf("Enter your age: ");
+  scanf("%d", &age);
 
-  printf("Result: %lf!", x);
+  age >= 18 ? printf("Ok!") : printf("Not Ok!");
 
   return 0;
 }

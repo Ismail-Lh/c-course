@@ -2,25 +2,25 @@
 #include <string.h>
 
 int main() {
-  // * WHILE LOOP -----> repeats a section of code possibly unlimited amount of times WHILE some condition remains true, a while loop might not execute at all
+  // * DO WHILE LOOP -----> always executes a block of code once, THEN checks a condition
 
-  char name[25];
-
-  printf("What's your name?: ");
-  fgets(name, 25, stdin);
-  name[strlen(name) - 1] = '\0';
+  int number = 0;
+  int sum = 0;
 
 
-  while (strlen(name) == 0)
+  do
   {
-    printf("\nYou did not enter your name\n");
+    printf("Enter a number above 0: ");
+    scanf("%d", &number);
 
-    printf("What's your name?: ");
-    fgets(name, 5, stdin);
-    name[strlen(name) - 1] = '\0';
-  }
+    if (number > 0)
+    {
+      sum += number;
+    }
 
-  printf("Thank you %s", name);
+  } while (number > 0);
+
+  printf("sum: %d", sum);
 
   return 0;
 }

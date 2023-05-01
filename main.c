@@ -1,38 +1,29 @@
 #include <stdio.h>
 #include <string.h>
 
-void sort(int array[], int size) {
+struct Player
+{
+  char name[12];
+  int score;
+};
 
-  for (int i = 0; i < size - 1; i++)
-  {
-    for (int j = 0; j < size - i - 1; j++)
-    {
-      if (array[j] > array[j + 1]) {
-        int temp = array[j];
-        array[j] = array[j + 1];
-        array[j + 1] = temp;
-      }
-    }
-
-  }
-}
-
-void printArray(int array[], int size) {
-  for (int i = 0; i < size; i++)
-  {
-    printf("%d ", array[i]);
-  }
-
-}
 
 int main() {
-  // * SORT AN ARRAY
+  // * STRUCT -----> collection of related members("VARIABLES"), they can be of different data types listed under one name in a block of memory
+  // ! VERY SIMILAR to classes in other languages (bu no methods)
 
-  int array[] = { 9, 77, 1, 0 , 5, 2, 99, 3, 25, 8, 6, 4 };
-  int size = sizeof(array) / sizeof(array[0]);
+  struct Player player1;
+  struct Player player2;
 
-  sort(array, size);
-  printArray(array, size);
+  strcpy(player1.name, "Ismail");
+  player1.score = 10;
+
+  strcpy(player2.name, "Saad");
+  player2.score = 8;
+
+  printf("your name is %s and your score is %d. \n", player1.name, player1.score);
+
+  printf("your name is %s and your score is %d. \n", player2.name, player2.score);
 
   return 0;
 }

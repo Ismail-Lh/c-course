@@ -1,27 +1,29 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef char user[12];
-
 typedef struct
 {
   char name[12];
-  char password[12];
+  int score;
   int id;
-} User;
+} Player;
 
 
 int main() {
-  // * TYPEDEF -----> reserved keyword that gives an existing datatype a "nickname"
+  // * ARRAY OF STRUCT
 
-  user name = "ISMAIL";
+  Player player1 = { "Ismail", 12, 147855 };
+  Player player2 = { "Saad", 17, 147856 };
+  Player player3 = { "Mohamed", 14, 147857 };
+  Player player4 = { "Adam", 20, 147858 };
 
-  User user1 = { "Ismail", "password123", 123456789 };
+  Player players[] = { player1, player2, player3, player4 };
 
-  User user2 = { "Saad", "password123", 987654321 };
+  for (int i = 0; i < sizeof(players) / sizeof(players[0]); i++)
+  {
+    printf("Your name is %s, and your score is %d! \n", players[i].name, players[i].score);
+  }
 
-  printf("%s", name);
-  printf("%d", user1.id);
 
   return 0;
 }

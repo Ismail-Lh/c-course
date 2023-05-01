@@ -1,29 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct
-{
-  char name[12];
-  int score;
-  int id;
-} Player;
 
+enum Day { Sun, Mon, Tue, Wed, Thu, Fri, Sat };
 
 int main() {
-  // * ARRAY OF STRUCT
+  // * ENUMS ----> a user defined type of named integer identifiers helps to make a program more readable 
 
-  Player player1 = { "Ismail", 12, 147855 };
-  Player player2 = { "Saad", 17, 147856 };
-  Player player3 = { "Mohamed", 14, 147857 };
-  Player player4 = { "Adam", 20, 147858 };
+  enum Day today = Mon;
 
-  Player players[] = { player1, player2, player3, player4 };
-
-  for (int i = 0; i < sizeof(players) / sizeof(players[0]); i++)
-  {
-    printf("Your name is %s, and your score is %d! \n", players[i].name, players[i].score);
-  }
-
+  // !: enums are NOT STRINGS, but they can be treated as int
+  printf("%d", today);
 
   return 0;
 }

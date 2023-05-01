@@ -1,29 +1,27 @@
 #include <stdio.h>
 #include <string.h>
 
-struct Player
+typedef char user[12];
+
+typedef struct
 {
   char name[12];
-  int score;
-};
+  char password[12];
+  int id;
+} User;
 
 
 int main() {
-  // * STRUCT -----> collection of related members("VARIABLES"), they can be of different data types listed under one name in a block of memory
-  // ! VERY SIMILAR to classes in other languages (bu no methods)
+  // * TYPEDEF -----> reserved keyword that gives an existing datatype a "nickname"
 
-  struct Player player1;
-  struct Player player2;
+  user name = "ISMAIL";
 
-  strcpy(player1.name, "Ismail");
-  player1.score = 10;
+  User user1 = { "Ismail", "password123", 123456789 };
 
-  strcpy(player2.name, "Saad");
-  player2.score = 8;
+  User user2 = { "Saad", "password123", 987654321 };
 
-  printf("your name is %s and your score is %d. \n", player1.name, player1.score);
-
-  printf("your name is %s and your score is %d. \n", player2.name, player2.score);
+  printf("%s", name);
+  printf("%d", user1.id);
 
   return 0;
 }

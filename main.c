@@ -1,29 +1,29 @@
 #include <stdio.h>
 #include <string.h>
 
-struct Player
+typedef struct
 {
   char name[12];
   int score;
-};
+  int id;
+} Player;
 
 
 int main() {
-  // * STRUCT -----> collection of related members("VARIABLES"), they can be of different data types listed under one name in a block of memory
-  // ! VERY SIMILAR to classes in other languages (bu no methods)
+  // * ARRAY OF STRUCT
 
-  struct Player player1;
-  struct Player player2;
+  Player player1 = { "Ismail", 12, 147855 };
+  Player player2 = { "Saad", 17, 147856 };
+  Player player3 = { "Mohamed", 14, 147857 };
+  Player player4 = { "Adam", 20, 147858 };
 
-  strcpy(player1.name, "Ismail");
-  player1.score = 10;
+  Player players[] = { player1, player2, player3, player4 };
 
-  strcpy(player2.name, "Saad");
-  player2.score = 8;
+  for (int i = 0; i < sizeof(players) / sizeof(players[0]); i++)
+  {
+    printf("Your name is %s, and your score is %d! \n", players[i].name, players[i].score);
+  }
 
-  printf("your name is %s and your score is %d. \n", player1.name, player1.score);
-
-  printf("your name is %s and your score is %d. \n", player2.name, player2.score);
 
   return 0;
 }

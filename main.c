@@ -1,24 +1,32 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-  // *:FORMAT SPECIFIER -----> defined and formats a type of data to be displayed
+  // * SWAP VALUE OF TWO VARIABLES
 
-  // ?: %c = character
-  // ?: %s = string (array of character)
-  // ?: %f = float
-  // ?: %lf = double
-  // ?: %d = integer
+  // char x = 'X';
+  // char y = 'Y';
+  // char temp;
 
-  // ?: %.1 = decimal precision
-  // ?: %1 = minimum field width
-  // ?: %- = left align
+  // temp = x;
+  // x = y;
+  // y = temp;
 
-  float item1 = 5.75;
-  float item2 = 10.00;
-  float item3 = 100.99;
+  // printf("x = %c \n", x);
+  // printf("y = %c \n", y);
 
-  printf("Item 1: $%f \n", item1); // !: float format specifier
-  printf("Item 1: $%.2f \n", item1); // !: float format specifier with 2 decimal precision
+  char x[15] = "water";
+  char y[15] = "Lemonade";
+  char temp[15];
+
+  strcpy(temp, x);
+  strcpy(x, y);
+  strcpy(y, temp);
+
+  printf("x = %s \n", x);
+  printf("y = %s \n", y);
+
 
   return 0;
 }
+

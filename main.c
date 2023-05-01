@@ -12,15 +12,29 @@ int main() {
   size_t columnsLen = sizeof(numbers[0]) / sizeof(numbers[0][0]);
 
 
-  for (int i = 0; i < rowsLen; i++)
+  // for (int i = 0; i < rowsLen; i++)
+  // {
+  //   for (int j = 0; j < columnsLen; j++)
+  //   {
+  //     printf("%d ", numbers[i][j]);
+  //   }
+
+  //   printf("\n");
+
+  // }
+
+ // * ARRAY OF STRINGS
+
+  char cars[][10] = { "Tesla", "Ferrari", "BMW" };
+
+  // !: how to reassign a string value inside an array
+  strcpy(cars[0], "Mustang");
+
+  size_t arrayLen = sizeof(cars) / sizeof(cars[0]);
+
+  for (int i = 0; i < arrayLen; i++)
   {
-    for (int j = 0; j < columnsLen; j++)
-    {
-      printf("%d ", numbers[i][j]);
-    }
-
-    printf("\n");
-
+    printf("%s \n", cars[i]);
   }
 
 

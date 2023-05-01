@@ -1,31 +1,29 @@
 #include <stdio.h>
 #include <string.h>
 
+struct Player
+{
+  char name[12];
+  int score;
+};
+
+
 int main() {
-  // * SWAP VALUE OF TWO VARIABLES
+  // * STRUCT -----> collection of related members("VARIABLES"), they can be of different data types listed under one name in a block of memory
+  // ! VERY SIMILAR to classes in other languages (bu no methods)
 
-  // char x = 'X';
-  // char y = 'Y';
-  // char temp;
+  struct Player player1;
+  struct Player player2;
 
-  // temp = x;
-  // x = y;
-  // y = temp;
+  strcpy(player1.name, "Ismail");
+  player1.score = 10;
 
-  // printf("x = %c \n", x);
-  // printf("y = %c \n", y);
+  strcpy(player2.name, "Saad");
+  player2.score = 8;
 
-  char x[15] = "water";
-  char y[15] = "Lemonade";
-  char temp[15];
+  printf("your name is %s and your score is %d. \n", player1.name, player1.score);
 
-  strcpy(temp, x);
-  strcpy(x, y);
-  strcpy(y, temp);
-
-  printf("x = %s \n", x);
-  printf("y = %s \n", y);
-
+  printf("your name is %s and your score is %d. \n", player2.name, player2.score);
 
   return 0;
 }

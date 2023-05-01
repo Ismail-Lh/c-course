@@ -2,29 +2,12 @@
 #include <string.h>
 
 int main() {
-  // * CONTINUE -----> skips rest of code & forces the next iteration of the loop
-  // * BREAK -----> exits a loop/switch
+  // * ARRAY -----> a data structure that can store many values of the same data type
 
-  // !: don't print number 13 || 14
-  // for (int i = 1; i <= 20; i++)
-  // {
-  //   if (i == 13 || i == 14) {
-  //     continue;
-  //   }
 
-  //   printf("%d \n", i);
-  // }
+  double prices[6] = { 5.0, 4.0, 10.0, 15.0 , 25.0, 20.0 };
 
-  // !: if the i = 13 break the code (exist)
-  for (int i = 1; i <= 20; i++)
-  {
-    if (i == 13) {
-      break;
-    }
-
-    printf("%d \n", i);
-  }
-
+  printf("$%.2lf", prices[5]);
 
   return 0;
 }

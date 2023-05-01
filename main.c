@@ -2,25 +2,32 @@
 #include <string.h>
 
 int main() {
-  // * DO WHILE LOOP -----> always executes a block of code once, THEN checks a condition
+  // * NESTED LOOPS -----> a loop inside of another loop
 
-  int number = 0;
-  int sum = 0;
+  int rows;
+  int columns;
+  char symbol;
 
+  printf("Enter # of rows: ");
+  scanf("%d", &rows);
 
-  do
+  printf("Enter # of columns: ");
+  scanf("%d", &columns);
+
+  scanf("%c");
+
+  printf("Enter a symbol to use: ");
+  scanf("%c", &symbol);
+
+  for (int i = 1; i <= rows; i++)
   {
-    printf("Enter a number above 0: ");
-    scanf("%d", &number);
-
-    if (number > 0)
+    for (int j = 1; j <= columns; j++)
     {
-      sum += number;
+      printf("%c", symbol);
     }
+    printf("\n");
+  }
 
-  } while (number > 0);
-
-  printf("sum: %d", sum);
 
   return 0;
 }

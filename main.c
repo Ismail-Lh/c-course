@@ -2,30 +2,27 @@
 #include <string.h>
 
 int main() {
-  // * NESTED LOOPS -----> a loop inside of another loop
+  // * CONTINUE -----> skips rest of code & forces the next iteration of the loop
+  // * BREAK -----> exits a loop/switch
 
-  int rows;
-  int columns;
-  char symbol;
+  // !: don't print number 13 || 14
+  // for (int i = 1; i <= 20; i++)
+  // {
+  //   if (i == 13 || i == 14) {
+  //     continue;
+  //   }
 
-  printf("Enter # of rows: ");
-  scanf("%d", &rows);
+  //   printf("%d \n", i);
+  // }
 
-  printf("Enter # of columns: ");
-  scanf("%d", &columns);
-
-  scanf("%c");
-
-  printf("Enter a symbol to use: ");
-  scanf("%c", &symbol);
-
-  for (int i = 1; i <= rows; i++)
+  // !: if the i = 13 break the code (exist)
+  for (int i = 1; i <= 20; i++)
   {
-    for (int j = 1; j <= columns; j++)
-    {
-      printf("%c", symbol);
+    if (i == 13) {
+      break;
     }
-    printf("\n");
+
+    printf("%d \n", i);
   }
 
 

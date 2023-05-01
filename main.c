@@ -2,18 +2,27 @@
 #include <string.h>
 
 int main() {
-  // * ARRAY -----> a data structure that can store many values of the same data type
+  // * 2D ARRAY -----> an array, where each element is an entire array
+  // * useful if you need a matrix, grid, or table of date 
+
+  int numbers[3][3] = { {1,2,3}, {4,5,6}, {7,8,9} };
+
+  size_t rowsLen = sizeof(numbers) / sizeof(numbers[0]);
+
+  size_t columnsLen = sizeof(numbers[0]) / sizeof(numbers[0][0]);
 
 
-  double prices[] = { 5.0, 4.0, 10.0, 15.0 , 25.0, 20.0 };
-
-  // !: GET THE LENGTH OF THE PRICES ARRAY
-  size_t pricesLen = sizeof(prices) / sizeof(prices[0]);
-
-  for (int i = 0; i < pricesLen; i++)
+  for (int i = 0; i < rowsLen; i++)
   {
-    printf("$%.2lf \n", prices[i]);
+    for (int j = 0; j < columnsLen; j++)
+    {
+      printf("%d ", numbers[i][j]);
+    }
+
+    printf("\n");
+
   }
+
 
   return 0;
 }

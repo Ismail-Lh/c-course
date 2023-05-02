@@ -1,16 +1,23 @@
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 
 enum Day { Sun, Mon, Tue, Wed, Thu, Fri, Sat };
 
 int main() {
-  // * ENUMS ----> a user defined type of named integer identifiers helps to make a program more readable 
+  // * MEMORY ----> an array of bytes within RAM (street)
+  // * MEMORY BLOCK -----> a single unit (byte) within a memory, used to hold some value (person)
+  // * MEMORY ADDRESS -----> the address of where a memory block is located (house address)
 
-  enum Day today = Mon;
+  char a;
+  char b[1];
 
-  // !: enums are NOT STRINGS, but they can be treated as int
-  printf("%d", today);
+  printf("%d bytes\n", sizeof(a));
+  printf("%d bytes\n", sizeof(b));
+
+  printf("%p\n", &a);
+  printf("%p\n", &b);
 
   return 0;
 }

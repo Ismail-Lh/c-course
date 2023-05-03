@@ -1,23 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-
-
-enum Day { Sun, Mon, Tue, Wed, Thu, Fri, Sat };
 
 int main() {
-  // * MEMORY ----> an array of bytes within RAM (street)
-  // * MEMORY BLOCK -----> a single unit (byte) within a memory, used to hold some value (person)
-  // * MEMORY ADDRESS -----> the address of where a memory block is located (house address)
+  // * WRITING FILES
 
-  char a;
-  char b[1];
+  // FILE* pf = fopen("text.txt", "w");
 
-  printf("%d bytes\n", sizeof(a));
-  printf("%d bytes\n", sizeof(b));
+  // fprintf(pf, "Hello World");
 
-  printf("%p\n", &a);
-  printf("%p\n", &b);
+  // fclose(pf);
+
+  if (remove("text.txt") == 0) {
+    printf("DELETED SUCCESSFULLY!!!");
+  }
+  else {
+    printf("DELETE ERROR!!!");
+  }
 
   return 0;
 }

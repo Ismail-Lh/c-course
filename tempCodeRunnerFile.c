@@ -1,10 +1,5 @@
-for (int i = 0; i < rowsLen; i++)
-  // {
-  //   for (int j = 0; j < 3; j++)
-  //   {
-  //     printf("%d", numbers[i][j]);
-  //   }
+FILE* pf = fopen("text.txt", "w");
 
-  //   printf("\n");
+  // fprintf(pf, "Hello World");
 
-  // }
+  // fclose(pf);

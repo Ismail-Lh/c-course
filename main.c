@@ -2,22 +2,24 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-
-enum Day { Sun, Mon, Tue, Wed, Thu, Fri, Sat };
+void printAge(int* pAge) {
+  printf("You are %d years old.", *pAge);
+}
 
 int main() {
-  // * MEMORY ----> an array of bytes within RAM (street)
-  // * MEMORY BLOCK -----> a single unit (byte) within a memory, used to hold some value (person)
-  // * MEMORY ADDRESS -----> the address of where a memory block is located (house address)
+  // * POINTERS -----> A pointer is a variable that stores the memory address of another variable as its value.
+  // * A pointer variable points to a data type (like int) of the same type, and is created with the * operator.
 
-  char a;
-  char b[1];
+  int age = 24;
+  int* pAge = &age;
 
-  printf("%d bytes\n", sizeof(a));
-  printf("%d bytes\n", sizeof(b));
+  // printf("address of age: %p \n", &age);
+  // printf("value of pAge: %p \n", pAge);
 
-  printf("%p\n", &a);
-  printf("%p\n", &b);
+  // printf("value of age: %d \n", age);
+  // printf("value at stored address: %d", *pAge);
+
+  printAge(pAge);
 
   return 0;
 }

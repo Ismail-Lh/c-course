@@ -1,25 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-
-void printAge(int* pAge) {
-  printf("You are %d years old.", *pAge);
-}
 
 int main() {
-  // * POINTERS -----> A pointer is a variable that stores the memory address of another variable as its value.
-  // * A pointer variable points to a data type (like int) of the same type, and is created with the * operator.
+  // * WRITING FILES
 
-  int age = 24;
-  int* pAge = &age;
+  // FILE* pf = fopen("text.txt", "w");
 
-  // printf("address of age: %p \n", &age);
-  // printf("value of pAge: %p \n", pAge);
+  // fprintf(pf, "Hello World");
 
-  // printf("value of age: %d \n", age);
-  // printf("value at stored address: %d", *pAge);
+  // fclose(pf);
 
-  printAge(pAge);
+  if (remove("text.txt") == 0) {
+    printf("DELETED SUCCESSFULLY!!!");
+  }
+  else {
+    printf("DELETE ERROR!!!");
+  }
 
   return 0;
 }

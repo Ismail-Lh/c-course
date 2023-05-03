@@ -1,20 +1,26 @@
 #include <stdio.h>
 
 int main() {
-  // * WRITING FILES
+  // * READING FILES
 
-  // FILE* pf = fopen("text.txt", "w");
+  FILE* pF = fopen("C:\\Users\\HP\\Desktop\\README.md", "r");
 
-  // fprintf(pf, "Hello World");
+  FILE* pHtml = fopen("index.html", "w");
 
-  // fclose(pf);
+  char buffer[255];
 
-  if (remove("text.txt") == 0) {
-    printf("DELETED SUCCESSFULLY!!!");
+  if (pF == NULL) {
+    printf("Unable to find the file! \n");
   }
   else {
-    printf("DELETE ERROR!!!");
+    while (fgets(buffer, 255, pF) != NULL)
+    {
+      fprintf(pHtml, buffer);
+    }
   }
+
+  fclose(pHtml);
+  fclose(pF);
 
   return 0;
 }
